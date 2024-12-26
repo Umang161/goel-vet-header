@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop Navigation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="top-header">
+            <button class="menu-button" aria-label="Menu">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/%3E%3C/svg%3E" alt="">
+            </button>
+            
+            <div class="logo-container">
+                <img src="./pet_images/company-logo.png" alt="Goel Vet Pharma">
+            </div>
+
+            <div class="search-container">
+                <input type="search" placeholder="Search anything for your pet...">
+                <button class="search-button">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E" alt="Search">
+                </button>
+            </div>
+
+            <nav class="utility-nav">
+                <a href="#">Support</a>
+                <a href="#">Account</a>
+                <a href="#" class="cart-icon">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/%3E%3C/svg%3E" alt="Cart">
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="nav-container">
+            <div class="main-nav">
+                <div class="nav-item">
+                    <a href="#" class="nav-link">HOME</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">SHOP BY BREED ▼</a>
+                    <div class="dropdown">
+                        <div class="breed-tabs">
+                            <div class="breed-tab active" data-type="dogs">Dog</div>
+                            <div class="breed-tab" data-type="cats">Cat</div>
+                        </div>
+                        <div class="breed-grid" id="breedGrid"></div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">SHOP BY DISEASES ▼</a>
+                    <div class="dropdown">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="./pet_images/1-5.webp" alt="Dog & Cat">
+                            </div>
+                            <div class="product-card">
+                                <img src="./pet_images/3-3.webp" alt="Cow & Buffalo">
+                            </div>
+                            <div class="product-card">
+                                <img src="./pet_images/2-3.webp" alt="Goat & Sheep">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">SHOP BY PRODUCTS ▼</a>
+                    <div class="dropdown">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="./pet_images/homeopathy-product1.webp" alt="Homeopathy Pet Medicine">
+                            </div>
+                            <div class="product-card">
+                                <img src="./pet_images/homeopathy-product2.webp" alt="Pet Supplement">
+                            </div>
+                            <div class="product-card">
+                                <img src="./pet_images/homeopathy-product3.webp" alt="Pet Grooming">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">BLOGS ▼</a>
+                    <div class="dropdown">
+                        <div class="blog-grid">
+                            <div class="blog-card">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Pets Blog" class="blog-image">
+                                <a href="#" class="blog-button">Pets Blog</a>
+                            </div>
+                            <div class="blog-card">
+                                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7" alt="Cattle Blog" class="blog-image">
+                                <a href="#" class="blog-button">Cattle Blog</a>
+                            </div>
+                            <div class="blog-card">
+                                <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e" alt="Sheep & Goat Blog" class="blog-image">
+                                <a href="#" class="blog-button">Sheep & Goat Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">CONSULT A VET ▼</a>
+                    <div class="dropdown">
+                        <div class="consult-grid">
+                            <div class="consult-card">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee" alt="Book Appointment" class="consult-image">
+                                <a href="#" class="consult-button">Book an Appointment</a>
+                            </div>
+                            <div class="consult-card">
+                                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7" alt="Business Enquiry" class="consult-image">
+                                <a href="#" class="consult-button">Business Enquiry</a>
+                            </div>
+                            <div class="consult-card">
+                                <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e" alt="Sample for Vet" class="consult-image">
+                                <a href="#" class="consult-button">Sample for Vet</a>
+                            </div>
+                            <div class="consult-card">
+                                <img src="https://images.unsplash.com/photo-1606214174585-fe31582dc6ee" alt="Subscribe as Vet" class="consult-image">
+                                <a href="#" class="consult-button">Subscribe as Vet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">ABOUT US ▼</a>
+                    <div class="text-dropdown">
+                        <div class="about-menu">
+                            <a href="#">About Dr. Goel</a>
+                            <a href="#">Homeopathy for Veterinary</a>
+                            <a href="#">Director Note</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">UPDATE ▼</a>
+                    <div class="text-dropdown">
+                        <div class="about-menu">
+                            <a href="#">Social Media</a>
+                            <a href="#">Videos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-header">
+            <button class="menu-button" aria-label="Close menu">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E" alt="">
+            </button>
+            <div class="logo-container">
+                <img src="./pet_images/company-logo.png" alt="Dr. Goel's">
+            </div>
+            <a href="#" class="cart-icon">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/%3E%3C/svg%3E" alt="Cart">
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Shop by Breed</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Dog" class="category-image">
+                                <span>Dog</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Cat" class="category-image">
+                                <span>Cat</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Shop by Diseases</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Dog & Cat" class="category-image">
+                                <span>Dog & Cat</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Cow & Buffalo" class="category-image">
+                                <span>Cow & Buffalo</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Goat & Sheep" class="category-image">
+                                <span>Goat & Sheep</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Hen & Bird" class="category-image">
+                                <span>Hen & Bird</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Shop by Products</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Homeopathy pets medicine" class="category-image">
+                                <span>Homeopathy pets medicine</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Homeopathy cattle medicine" class="category-image">
+                                <span>Homeopathy cattle medicine</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Pet supplement" class="category-image">
+                                <span>Pet supplement</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Pet Grooming" class="category-image">
+                                <span>Pet Grooming</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Homeopathy Caprine Medicine" class="category-image">
+                                <span>Homeopathy Caprine Medicine</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Homeopathy poultry medicine" class="category-image">
+                                <span>Homeopathy poultry medicine</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Animal feed supplement" class="category-image">
+                                <span>Animal feed supplement</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Blogs</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Pet Blogs" class="category-image">
+                                <span>Pet Blogs</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Cattle Blog" class="category-image">
+                                <span>Cattle Blog</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Goat & Sheep Blogs" class="category-image">
+                                <span>Goat & Sheep Blogs</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Consult a Vet</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Book an Appointment" class="category-image">
+                                <span>Book an Appointment</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Business Enquiry" class="category-image">
+                                <span>Business Enquiry</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Sample for Vet" class="category-image">
+                                <span>Sample for Vet</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Subscribe as Vet" class="category-image">
+                                <span>Subscribe as Vet</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>About us</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="About Dr. Goel's" class="category-image">
+                                <span>About Dr. Goel's</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Homeopathy for veterinary" class="category-image">
+                                <span>Homeopathy for veterinary</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Director Note" class="category-image">
+                                <span>Director Note</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        <img src="./pet_images/cough-cold.webp" alt="" class="nav-icon">
+                        <span>Update</span>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E" alt="" class="arrow-icon">
+                    </a>
+                    <div class="mobile-nav-content">
+                        <div class="category-grid">
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Social Media" class="category-image">
+                                <span>Social Media</span>
+                            </a>
+                            <a href="#" class="category-card">
+                                <img src="./pet_images/cough-cold.webp" alt="Videos" class="category-image">
+                                <span>Videos</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+<!-- Responsive search bar -->
+<div class="responsive-search hidden">
+    <div class="search-container">
+        <input type="text" class="responsive-search-bar" placeholder="Search here...">
+        <button class="search-button">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E" alt="Search">
+        </button>
+    </div>
+</div>
+    <script src="header.js"></script>
+</body>
+</html>
