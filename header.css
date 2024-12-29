@@ -248,6 +248,17 @@
     color: #333;
 }
 
+.breed-card a {
+    text-decoration: none; /* Removes underline */
+    width: 100%;
+    height: 100%;
+}
+
+.breed-card a:hover {
+    text-decoration: none; /* Ensures underline doesn't appear on hover */
+}
+
+
 .consult-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -544,6 +555,33 @@
 }
 
 
+
+.responsive-search .search-container .query-form {
+    width: 100%;
+    position: relative;
+    height:40px;
+    display: flex;
+    align-items: center;
+}
+
+.responsive-search .search-container .query-form input {
+    flex-grow: 1;
+}
+
+
+.query-form {
+    width: 100%;
+    position: relative;
+    height:40px;
+    display: flex;
+    align-items: center;
+}
+
+.query-form input {
+    flex-grow: 1;
+}
+
+
 /* Mobile Styles */
 @media (max-width: 1000px) {
 
@@ -591,6 +629,3 @@
         display: block;
     }
 }
-
-
-
